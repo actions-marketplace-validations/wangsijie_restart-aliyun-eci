@@ -43,7 +43,7 @@ async function run() {
 
   const res = await client.invoke('RestartContainerGroup', {
     RegionId: regionId,
-    ContainerGroupId: container.ContainerGroupId,
+    ContainerGroupId: containerGroupId,
   });
 
   console.log(res);
