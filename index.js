@@ -38,7 +38,7 @@ async function run() {
     );
     if (!group) {
       core.setFailed(
-        `Cannot find ContainerGroup with name: ${ContainerGroupName}`
+        `Cannot find ContainerGroup with name: ${containerGroupName}`
       );
       return;
     }
