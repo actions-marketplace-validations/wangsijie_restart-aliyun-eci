@@ -17,5 +17,5 @@ inputs:
     description: ContainerGroupName, optional, search for ContainerGroupId
     required: false
 runs:
-  using: node12
+  using: 'node12'
   main: app.js
