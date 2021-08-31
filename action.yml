@@ -1,0 +1,21 @@
+name: Restart Aliyun ECI ContainerGroup
+description: Restart Aliyun ECI ContainerGroup
+inputs: 
+  access-key-id:
+    description: Access key id
+    required: true
+  access-key-secret:
+    description: Access key secret
+    required: true
+  region-id:
+    description: Region id
+    required: true
+  container-group-id:
+    description: ContainerGroupId, optional, will override ContainerGroupName
+    required: false
+  container-group-name:
+    description: ContainerGroupName, optional, search for ContainerGroupId
+    required: false
+runs:
+  using: node12
+  main: app.js

@@ -1,0 +1,12 @@
+{
+  "name": "restart-aliyun-eci",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:wangsijie/restart-aliyun-eci.git",
+  "author": "wangsijie <i@sijie.wang>",
+  "license": "MIT",
+  "dependencies": {
+    "@actions/core": "^1.5.0",
+    "aliyun-sdk-node-request": "^0.2.2"
+  }
+}
