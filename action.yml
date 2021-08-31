@@ -16,6 +16,9 @@ inputs:
   container-group-name:
     description: ContainerGroupName, optional, search for ContainerGroupId
     required: false
+outputs:
+  res: 
+    description: RestartContainerGroup response data
 runs:
   using: 'node12'
   main: dist/index.js
