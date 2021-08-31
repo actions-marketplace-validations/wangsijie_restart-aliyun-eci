@@ -6,10 +6,7 @@
   "author": "wangsijie <i@sijie.wang>",
   "license": "MIT",
   "scripts": {
-    "lint": "eslint .",
-    "prepare": "ncc build app.js -o dist --source-map --license licenses.txt",
-    "test": "jest",
-    "all": "npm run lint && npm run prepare && npm run test"
+    "prepare": "ncc build app.js -o dist --source-map"
   },
   "dependencies": {
     "@actions/core": "^1.5.0",
