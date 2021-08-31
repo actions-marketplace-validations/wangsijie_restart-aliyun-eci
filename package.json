@@ -1,12 +1,12 @@
 {
   "name": "restart-aliyun-eci",
   "version": "1.0.0",
-  "main": "app.js",
+  "main": "index.js",
   "repository": "git@github.com:wangsijie/restart-aliyun-eci.git",
   "author": "wangsijie <i@sijie.wang>",
   "license": "MIT",
   "scripts": {
-    "prepare": "ncc build app.js -o dist --source-map"
+    "prepare": "ncc build index.js -o dist --source-map"
   },
   "dependencies": {
     "@actions/core": "^1.5.0",
