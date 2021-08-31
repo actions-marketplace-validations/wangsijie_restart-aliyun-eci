@@ -4289,21 +4289,25 @@ async function run() {
       RegionId: regionId,
     });
     const { ContainerGroups } = res.data;
-    const group = ContainerGroups.find((item) => item.ContainerGroupName === containerGroupName);
+    const group = ContainerGroups.find(
+      (item) => item.ContainerGroupName === containerGroupName
+    );
     if (!group) {
-      core.setFailed(`Cannot find ContainerGroup with name: ${ContainerGroupName}`);
+      core.setFailed(
+        `Cannot find ContainerGroup with name: ${ContainerGroupName}`
+      );
       return;
     }
     containerGroupId = group.ContainerGroupId;
   }
 
-  const res = await client.invoke('RestartContainerGroup', {
+  const res = await client.invoke("RestartContainerGroup", {
     RegionId: regionId,
     ContainerGroupId: containerGroupId,
   });
 
-  console.log(res);
-  core.setOutput("ECI_RESTART_RES", res);
+  console.log(res.data);
+  core.setOutput("res", res.data);
 }
 
 run().catch((e) => core.setFailed(e));
